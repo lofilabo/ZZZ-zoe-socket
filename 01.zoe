@@ -1,0 +1,56 @@
+oh look !
+
+^.^{
+NOTES:
+
+VERY BASIC, VERY VERY BASIC
+Socket -- actually, a 'peep beneath' the HTTP server.
+
+  New Things: Don't think of as 'web server'
+
+  Run:
+        zoe ./01.zoe
+
+  To Test:
+        ncat 127.0.0.1 13338
+        AND THEN, press >>RETURN<< !!
+
+-- ncat is the thing to think of here !!
+
+}^.^
+
+^.^ CAN HAS STDIO?
+CAN HAS SOCKS?
+CAN HAS STRING?
+^.^ CAN HAS MYLIB?
+
+	function I myFunctionThree <--[ arriving_value zAnd second_value zAnd third_value
+
+		pencil "Running at:"
+		pencil "127.0.0.1:13338"
+		I define sock
+		sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13338 ]--<
+
+		zoe_loop_begin loop
+
+			I define conn
+			conn <-=- I wish_to_call SOCKS --toBaby--> LISTN <--[ sock ]--<
+			I define cmd
+			cmd  <-=- I wish_to_call SOCKS --toBaby-->  GET <--[ sock zAnd conn zAnd 1000000 ]--<
+
+			I define reply = ""
+
+			reply <-=- "lovely zoe; good morning!"
+			
+			pencil reply
+
+			I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
+			I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+
+		zoe_loop_end loop
+
+	end_of_function
+
+	retVal <-=- I wish_to_call myFunctionThree <--[ 44.4 zAnd 333 zAnd "Jamie!" ]--<
+
+I see !
