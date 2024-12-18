@@ -1,0 +1,29 @@
+oh look !
+
+	CAN HAS SOCKS?
+pencil "NEW CLIENT"
+	I define local
+	I define addr
+	I define remote
+	local <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13338 ]--<
+	addr <-=- I wish_to_call SOCKS --toBaby--> RESOLV <--[ "127.0.0.1" ]--<
+	remote <-=- I wish_to_call SOCKS --toBaby--> KONN <--[ local zAnd addr zAnd 13338 ]--<
+
+	I define outout
+	^.^ outout <-=- "Good Morning from Client:)" ^.^ :) line-return
+	outout <-=- "Good Morning from zoe client"
+
+	I define rezult
+	rezult <-=- I wish_to_call SOCKS --toBaby--> PUT  <--[ local zAnd remote zAnd outout ]--<
+	^.^ pencil rezult
+
+	I define data
+	data <-=- I wish_to_call SOCKS --toBaby--> GET <--[ local zAnd remote zAnd 1000 ]--<
+
+	pencil "Outgoing: "
+	pencil outout
+	pencil "Incoming: "
+	pencil data
+	I wish_to_call SOCKS --toBaby--> CLOSE <--[ local ]--<
+
+I see !
