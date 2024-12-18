@@ -29,7 +29,7 @@ CAN HAS STRING?
 		pencil "Running at:"
 		pencil "127.0.0.1:13338"
 		I define sock
-		sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13338 ]--<
+		sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 7890 ]--<
 
 		zoe_loop_begin loop
 
