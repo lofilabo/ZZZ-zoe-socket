@@ -43,7 +43,7 @@ oh look !
 ^.^	rezrez <-=- zBoth   1 {.} 1	^.^ both
 ^.^	rezrez <-=- zEith   0 {.} 0	^.^ either or both
 ^.^	rezrez <-=- zOne    1 {.} 1	^.^ one-of-other but not both
-	rezrez <-=- zNot    0		^.^ returns Opposite
+	rezrez <-=- zNot    1		^.^ returns Opposite
 
 	zoe_same rezrez {.} FAIL
 		zoe_match?
