@@ -1,0 +1,112 @@
+oh look ! 
+
+	I define var1 = "letterUP"
+	I define var2 = "letterDOWN"
+
+	I define var3 = 1
+	I define var4 = 2
+
+
+	I define var5 = WIN
+	I define var6 = FAIL
+
+	
+	I define var7 = "a"
+	I define var8 = "b"
+
+	I define rezrez = FAIL
+
+	pencil toysoldiers>--[ "All Availables " ":-> " var1 "; " var2 "; " var3 "; " var4  ]--<
+
+
+	pencil "------------------------------------------------------"
+	pencil "Step 0.1: Not"
+	^.^ zoe_same var1 {.} var2
+	zoe_different var1 {.} var2
+	zoe_match?
+		zoe_pass
+			pencil "You Passed!"
+		zoe_fail
+			pencil "You Failed!"
+	zoe_oh_I_see
+
+	pencil "------------------------------------------------------"
+	pencil "Step 0.2: Bigger"
+	pencil z> var3 {.} var4
+	pencil z< var3 {.} var4
+
+	pencil "------------------------------------------------------"
+	pencil "Step 0.3: Both Either One Not etc...."
+
+	rezrez <-=- zBoth   var7 {.} var8
+
+	zoe_same rezrez {.} FAIL
+		zoe_match?
+			zoe_pass
+				pencil "Result was: FAILED!"
+			zoe_fail
+				pencil "Result was: PASSED!"
+		zoe_oh_I_see	
+
+	rezrez <-=- zEith   var7 {.} var8
+	rezrez <-=- zOne    var7 {.} var8
+	rezrez <-=- zNot    var7
+
+
+
+
+  ^.^{
+	pencil "let's start...."
+
+	I define var11 = "letterUP"
+	I define var21 = "letterUP"
+	I define var31 = "letterDOWN"
+	I define var41 = "letterMIDDLE"
+	I define var51 = "letterOUTTHERE"
+
+	pencil "------------------------------------------------------"
+	pencil "Step 1:"
+	^.^ This should pass
+	zoe_same var11 {.} var21
+	zoe_match?
+		zoe_pass
+			pencil "You Passed!"
+		zoe_fail
+			pencil "You Failed!"
+	zoe_oh_I_see
+
+
+	pencil "------------------------------------------------------"
+	pencil "Step 2:"
+	^.^ This should fail
+	zoe_same var11 {.} var21
+	zoe_match?
+		zoe_pass
+			pencil "You Passed!"
+		zoe_fail
+			pencil "You Failed!"
+	zoe_oh_I_see
+
+
+	pencil "------------------------------------------------------"
+	^.^ This can pass (3 times!) and fail once.
+	pencil "Step 3:"
+	zoe_same var11 {.} var21
+	zoe_match?
+		zoe_pass
+			pencil "You Passed Stage 1"
+
+		zoe_else zoe_same var1 {.} var4
+			pencil "You Passed Stage 2"
+
+		zoe_else zoe_same var1 {.} var5
+			pencil "You Passed Stage 3"
+
+		zoe_fail
+			pencil "You Failed."
+	zoe_oh_I_see
+  }^.^
+
+I see !
+
+
