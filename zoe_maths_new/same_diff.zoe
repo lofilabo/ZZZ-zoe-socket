@@ -11,8 +11,8 @@ oh look !
 	I define var6 = FAIL
 
 	
-	I define var7 = "a"
-	I define var8 = "b"
+	I define var7 = "f"
+	I define var8 = "g"
 
 	I define rezrez = FAIL
 
@@ -38,7 +38,12 @@ oh look !
 	pencil "------------------------------------------------------"
 	pencil "Step 0.3: Both Either One Not etc...."
 
-	rezrez <-=- zBoth   var7 {.} var8
+^.^  0 is fail; 1 is pass (maybe any number but 0)
+
+^.^	rezrez <-=- zBoth   1 {.} 1	^.^ both
+^.^	rezrez <-=- zEith   0 {.} 0	^.^ either or both
+^.^	rezrez <-=- zOne    1 {.} 1	^.^ one-of-other but not both
+	rezrez <-=- zNot    0		^.^ returns Opposite
 
 	zoe_same rezrez {.} FAIL
 		zoe_match?
@@ -48,9 +53,7 @@ oh look !
 				pencil "Result was: PASSED!"
 		zoe_oh_I_see	
 
-	rezrez <-=- zEith   var7 {.} var8
-	rezrez <-=- zOne    var7 {.} var8
-	rezrez <-=- zNot    var7
+
 
 
 
